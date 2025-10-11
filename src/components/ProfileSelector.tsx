@@ -13,10 +13,8 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
   const [newProfileName, setNewProfileName] = useState('');
 
   useEffect(() => {
-    async function setupAndLoad() {
-    await indexedDBService.init(); // Ensure initialization
-    await loadProfiles();
-  }
+    loadProfiles();
+  
 
   }, []);
 
