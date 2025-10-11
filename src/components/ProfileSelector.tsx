@@ -21,6 +21,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
   }, []);
 
   const loadProfiles = async () => {
+    await db.open();
     const loadedProfiles = await db.getProfiles();
     setProfiles(loadedProfiles);
   };
