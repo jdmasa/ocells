@@ -17,7 +17,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
     await indexedDBService.init(); // Ensure initialization
     await loadProfiles();
   }
-    loadProfiles();
+
   }, []);
 
   const loadProfiles = async () => {
