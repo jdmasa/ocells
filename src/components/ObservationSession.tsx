@@ -224,7 +224,7 @@ export function ObservationSession({
 
           <button
             onClick={() => setShowCustomBirdDialog(true)}
-            className="aspect-square bg-white rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-dashed border-amber-300 hover:border-amber-500 flex flex-col items-center justify-center gap-2 text-amber-600"
+            className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-dashed border-amber-300 hover:border-amber-500 flex flex-col items-center justify-center gap-2 text-amber-600"
           >
             <Plus className="w-8 h-8" />
             <span className="text-sm font-medium">Afegir ocell</span>
