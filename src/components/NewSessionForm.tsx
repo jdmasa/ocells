@@ -85,7 +85,7 @@ export function NewSessionForm({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-emerald-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -103,7 +103,7 @@ export function NewSessionForm({
                 id="startTime"
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 required
               />
             </div>
@@ -128,7 +128,7 @@ export function NewSessionForm({
               <button
                 type="button"
                 onClick={() => setShowMap(true)}
-                className="w-full px-4 py-2 border border-emerald-500 text-emerald-600 rounded-xl hover:bg-emerald-50 transition-colors font-medium"
+                className="w-full px-4 py-2 border border-amber-500 text-amber-600 rounded-xl hover:bg-amber-50 transition-colors font-medium"
               >
                 Seleccionar ubicació al mapa
               </button>
@@ -145,7 +145,7 @@ export function NewSessionForm({
               <button
                 type="submit"
                 disabled={!location || !startTime}
-                className="flex-1 px-4 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:bg-gray-300 disabled:cursor-not-allowed font-medium transition-colors flex items-center justify-center gap-2"
+                className="flex-1 px-4 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 disabled:bg-gray-300 disabled:cursor-not-allowed font-medium transition-colors flex items-center justify-center gap-2"
               >
                 Començar
                 <ArrowRight className="w-5 h-5" />
