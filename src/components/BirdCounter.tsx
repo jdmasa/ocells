@@ -53,11 +53,11 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
           )}
         </div>
         <p className="text-sm font-medium text-gray-800 text-center line-clamp-2">{birdName}</p>
-        
+        {count > 0 && (
           <div className="mt-2 bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
             {count}
           </div>
-        
+        )}
       </button>
 
       {showDetail && (
