@@ -19,7 +19,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-emerald-50">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-amber-50">
       <div className="max-w-4xl mx-auto p-4">
         <div className="bg-white rounded-2xl shadow-xl p-6 mb-4">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Sessions Anteriors</h2>
@@ -34,7 +34,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
             <p className="text-gray-600 mb-6">No tens cap sessió guardada</p>
             <button
               onClick={onBack}
-              className="px-6 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 transition-colors"
+              className="px-6 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 transition-colors"
             >
               Tornar a l'inici
             </button>
@@ -49,7 +49,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
               >
                 <div className="flex-1 text-left">
                   <div className="flex items-center gap-2 mb-2">
-                    <Calendar className="w-4 h-4 text-emerald-600" />
+                    <Calendar className="w-4 h-4 text-amber-600" />
                     <span className="font-semibold text-gray-800">
                       {formatDate(session.start_time)}
                     </span>
@@ -62,7 +62,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
                       </span>
                     </div>
                     {session.end_time && (
-                      <span className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-full text-xs font-medium">
                         Finalitzada
                       </span>
                     )}
@@ -73,7 +73,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
                     )}
                   </div>
                 </div>
-                <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-emerald-600 transition-colors" />
+                <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-amber-600 transition-colors" />
               </button>
             ))}
 
