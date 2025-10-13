@@ -37,7 +37,7 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
     <>
       <button
         onClick={() => setShowDetail(true)}
-        className={`aspect-square bg-white rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center p-4 ${
+        className={`bg-white rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center p-4 ${
           count > 0 ? 'ring-2 ring-amber-500' : ''
         }`}
       >
