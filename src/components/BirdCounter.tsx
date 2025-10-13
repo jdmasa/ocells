@@ -47,7 +47,7 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
           {imageUrl ? (
             <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full" />
           ) : (
-            <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-amber-600'} object-cover`} />
+            <Bird className={`w-16 h-16 ${isCustom ? 'text-sky-600' : 'text-amber-600'} object-cover`} />
           )}
         </div>
         <p className="text-sm font-medium text-gray-800 text-center line-clamp-2">{birdName}</p>
@@ -62,13 +62,13 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-6">
             <div className="flex flex-col items-center mb-6">
-              <div className={`w-20 h-20 flex items-center justify-center mb-3 overflow-hidden ${
+              <div className={`w-40 h-40 flex items-center justify-center mb-3 overflow-hidden ${
                 isCustom ? 'bg-sky-100' : 'bg-amber-100'
               }`}>
                 {imageUrl ? (
                   <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full " />
                 ) : (
-                  <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'} object-cover`} />
+                  <Bird className={`w-20 h-20 ${isCustom ? 'text-sky-600' : 'text-amber-600'} object-cover`} />
                 )}
               </div>
               <h3 className="text-xl font-bold text-gray-800 text-center">{birdName}</h3>
