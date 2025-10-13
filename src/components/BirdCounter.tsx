@@ -26,17 +26,17 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
       <button
         onClick={() => setShowDetail(true)}
         className={`aspect-square bg-white rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center p-4 ${
-          count > 0 ? 'ring-2 ring-emerald-500' : ''
+          count > 0 ? 'ring-2 ring-amber-500' : ''
         }`}
       >
         <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-2 ${
-          isCustom ? 'bg-sky-100' : 'bg-emerald-100'
+          isCustom ? 'bg-sky-100' : 'bg-amber-100'
         }`}>
-          <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-emerald-600'}`} />
+          <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
         </div>
         <p className="text-sm font-medium text-gray-800 text-center line-clamp-2">{birdName}</p>
         {count > 0 && (
-          <div className="mt-2 bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
+          <div className="mt-2 bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
             {count}
           </div>
         )}
@@ -47,9 +47,9 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-6">
             <div className="flex flex-col items-center mb-6">
               <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-3 ${
-                isCustom ? 'bg-sky-100' : 'bg-emerald-100'
+                isCustom ? 'bg-sky-100' : 'bg-amber-100'
               }`}>
-                <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-emerald-600'}`} />
+                <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
               </div>
               <h3 className="text-xl font-bold text-gray-800 text-center">{birdName}</h3>
             </div>
@@ -63,13 +63,13 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
                 <Minus className="w-6 h-6 text-gray-700" />
               </button>
 
-              <div className="w-24 h-24 bg-emerald-50 rounded-2xl flex items-center justify-center">
-                <span className="text-4xl font-bold text-emerald-600">{count}</span>
+              <div className="w-24 h-24 bg-amber-50 rounded-2xl flex items-center justify-center">
+                <span className="text-4xl font-bold text-amber-600">{count}</span>
               </div>
 
               <button
                 onClick={increment}
-                className="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 rounded-full flex items-center justify-center transition-colors"
+                className="w-14 h-14 bg-amber-600 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
               >
                 <Plus className="w-6 h-6 text-white" />
               </button>
