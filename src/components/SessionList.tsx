@@ -62,7 +62,7 @@ export function SessionList({ sessions, onSessionSelect, onBack }: SessionListPr
                       </span>
                     </div>
                     {session.end_time && (
-                      <span className="bg-amber-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-medium">
                         Finalitzada
                       </span>
                     )}
