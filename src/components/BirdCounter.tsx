@@ -66,9 +66,9 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
                 isCustom ? 'bg-sky-100' : 'bg-amber-100'
               }`}>
                 {imageUrl ? (
-                  <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full" />
+                  <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full " />
                 ) : (
-                  <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
+                  <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'} object-cover`} />
                 )}
               </div>
               <h3 className="text-xl font-bold text-gray-800 text-center">{birdName}</h3>
