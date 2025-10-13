@@ -41,11 +41,11 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
           count > 0 ? 'ring-2 ring-amber-500' : ''
         }`}
       >
-        <div className={`w-16 h-16 flex items-center justify-center mb-2  ${
+        <div className={`w-16 h-16 flex items-center justify-center mb-2 overflow-hidden ${
           isCustom ? 'bg-sky-100' : 'bg-amber-100'
         }`}>
           {imageUrl ? (
-            <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full object-cover" />
+            <img src={`ocells/${imageUrl}`} alt={birdName} className="w-full h-full" />
           ) : (
             <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
           )}
