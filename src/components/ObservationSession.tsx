@@ -227,7 +227,7 @@ export function ObservationSession({
             className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-dashed border-amber-300 hover:border-amber-500 flex flex-col items-center justify-center gap-2 text-amber-600"
           >
             <Plus className="w-32 h-32" />
-            <span className="w-32 h-32 text-sm font-medium">Afegir ocell</span>
+            <span className="w-8 h-8 text-sm font-medium">Afegir ocell</span>
           </button>
         </div>
       </div>
