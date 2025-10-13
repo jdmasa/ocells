@@ -24,7 +24,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
               Què vols fer avui?
             </p>
           </div>
-
+ Fotos de https://ornitologia.org/ca/fitxa_jardins.pdf
           <div className="space-y-4">
             <button
               onClick={onStartNewSession}
@@ -66,7 +66,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
           </button>
         </div>
       </div>
-      Fotos de https://ornitologia.org/ca/fitxa_jardins.pdf
+     
     </div>
   );
 }
