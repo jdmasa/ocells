@@ -41,7 +41,7 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
           count > 0 ? 'ring-2 ring-amber-500' : ''
         }`}
       >
-        <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden ${
+        <div className={`w-16 h-16 flex items-center justify-center mb-2  ${
           isCustom ? 'bg-sky-100' : 'bg-amber-100'
         }`}>
           {imageUrl ? (
