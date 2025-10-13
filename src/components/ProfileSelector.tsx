@@ -39,12 +39,12 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-emerald-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="flex items-center justify-center mb-6">
-            <div className="bg-emerald-100 p-4 rounded-full">
-              <Users className="w-12 h-12 text-emerald-600" />
+            <div className="bg-amber-100 p-4 rounded-full">
+              <Users className="w-12 h-12 text-amber-600" />
             </div>
           </div>
 
@@ -61,12 +61,12 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
                 <button
                   key={profile.id}
                   onClick={() => onProfileSelected(profile)}
-                  className="w-full p-4 bg-emerald-50 hover:bg-emerald-100 rounded-xl transition-colors flex items-center justify-between group"
+                  className="w-full p-4 bg-amber-50 hover:bg-amber-100 rounded-xl transition-colors flex items-center justify-between group"
                 >
                   <span className="text-lg font-medium text-gray-800">
                     {profile.name}
                   </span>
-                  <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Users className="w-5 h-5 text-white" />
                   </div>
                 </button>
@@ -74,7 +74,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
 
               <button
                 onClick={() => setShowNewProfile(true)}
-                className="w-full p-4 border-2 border-dashed border-emerald-300 hover:border-emerald-500 rounded-xl transition-colors flex items-center justify-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium"
+                className="w-full p-4 border-2 border-dashed border-amber-300 hover:border-amber-500 rounded-xl transition-colors flex items-center justify-center gap-2 text-amber-600 hover:text-amber-700 font-medium"
               >
                 <UserPlus className="w-5 h-5" />
                 Crear nou perfil
@@ -92,7 +92,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
                   value={newProfileName}
                   onChange={(e) => setNewProfileName(e.target.value)}
                   placeholder="Introdueix el teu nom"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                   autoFocus
                 />
               </div>
@@ -111,7 +111,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
                 <button
                   type="submit"
                   disabled={!newProfileName.trim()}
-                  className="flex-1 px-4 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:bg-gray-300 disabled:cursor-not-allowed font-medium transition-colors"
+                  className="flex-1 px-4 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 disabled:bg-gray-300 disabled:cursor-not-allowed font-medium transition-colors"
                 >
                   Crear
                 </button>
