@@ -64,6 +64,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
             <LogOut className="w-5 h-5" />
             <span className="font-medium">Canviar de perfil</span>
           </button>
+          Fotos de https://ornitologia.org/ca/fitxa_jardins.pdf
         </div>
       </div>
      
