@@ -43,6 +43,14 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Phoenicurus ochruros',
     image: '16.jpg',
   },
+    {
+    id: 'turdus-merula',
+    name_ca: 'Merla',
+    name_es: 'Mirlo común',
+    scientific_name: 'Turdus merula',
+      image: '19.jpg'
+  },
+
   
   {
     id: 'passer-domesticus',
@@ -50,12 +58,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Gorrión común',
     scientific_name: 'Passer domesticus',
   },
-  {
-    id: 'turdus-merula',
-    name_ca: 'Merla',
-    name_es: 'Mirlo común',
-    scientific_name: 'Turdus merula',
-  },
+
   {
     id: 'sturnus-vulgaris',
     name_ca: 'Estornell vulgar',
