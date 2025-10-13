@@ -29,7 +29,7 @@ export interface BirdSpecies {
   name_ca: string;
   name_es: string;
   scientific_name: string;
-  image_url?: string;
+  image?: string;
 }
 
 export interface SessionWithObservations extends ObservationSession {

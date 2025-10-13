@@ -5,10 +5,11 @@ interface BirdCounterProps {
   birdName: string;
   count: number;
   isCustom?: boolean;
+  imageUrl?: string;
   onCountChange: (count: number) => void;
 }
 
-export function BirdCounter({ birdName, count, isCustom = false, onCountChange }: BirdCounterProps) {
+export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCountChange }: BirdCounterProps) {
   const [showDetail, setShowDetail] = useState(false);
   const [showCustomInput, setShowCustomInput] = useState(false);
   const [customValue, setCustomValue] = useState('');
@@ -40,10 +41,14 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
           count > 0 ? 'ring-2 ring-amber-500' : ''
         }`}
       >
-        <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-2 ${
+        <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden ${
           isCustom ? 'bg-sky-100' : 'bg-amber-100'
         }`}>
-          <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
+          {imageUrl ? (
+            <img src={`/ocells/${imageUrl}`} alt={birdName} className="w-full h-full object-cover" />
+          ) : (
+            <Bird className={`w-8 h-8 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
+          )}
         </div>
         <p className="text-sm font-medium text-gray-800 text-center line-clamp-2">{birdName}</p>
         {count > 0 && (
@@ -57,10 +62,14 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-6">
             <div className="flex flex-col items-center mb-6">
-              <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-3 ${
+              <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-3 overflow-hidden ${
                 isCustom ? 'bg-sky-100' : 'bg-amber-100'
               }`}>
-                <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
+                {imageUrl ? (
+                  <img src={`/ocells/${imageUrl}`} alt={birdName} className="w-full h-full object-cover" />
+                ) : (
+                  <Bird className={`w-10 h-10 ${isCustom ? 'text-sky-600' : 'text-amber-600'}`} />
+                )}
               </div>
               <h3 className="text-xl font-bold text-gray-800 text-center">{birdName}</h3>
             </div>

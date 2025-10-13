@@ -207,6 +207,7 @@ export function ObservationSession({
               key={bird.id}
               birdName={bird.name_ca}
               count={getBirdCount(bird.id)}
+              imageUrl={bird.image}
               onCountChange={(count) => handleBirdCountChange(bird.id, count)}
             />
           ))}
