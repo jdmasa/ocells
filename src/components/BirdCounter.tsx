@@ -10,6 +10,8 @@ interface BirdCounterProps {
 
 export function BirdCounter({ birdName, count, isCustom = false, onCountChange }: BirdCounterProps) {
   const [showDetail, setShowDetail] = useState(false);
+  const [showCustomInput, setShowCustomInput] = useState(false);
+  const [customValue, setCustomValue] = useState('');
 
   const increment = () => {
     onCountChange(count + 1);
@@ -18,6 +20,15 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
   const decrement = () => {
     if (count > 0) {
       onCountChange(count - 1);
+    }
+  };
+
+  const handleCustomSubmit = () => {
+    const value = parseInt(customValue, 10);
+    if (!isNaN(value) && value >= 0) {
+      onCountChange(value);
+      setShowCustomInput(false);
+      setCustomValue('');
     }
   };
 
@@ -63,9 +74,15 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
                 <Minus className="w-6 h-6 text-gray-700" />
               </button>
 
-              <div className="w-24 h-24 bg-amber-50 rounded-2xl flex items-center justify-center">
+              <button
+                onClick={() => {
+                  setCustomValue(count.toString());
+                  setShowCustomInput(true);
+                }}
+                className="w-24 h-24 bg-amber-50 hover:bg-amber-100 rounded-2xl flex items-center justify-center transition-colors"
+              >
                 <span className="text-4xl font-bold text-amber-600">{count}</span>
-              </div>
+              </button>
 
               <button
                 onClick={increment}
@@ -81,6 +98,51 @@ export function BirdCounter({ birdName, count, isCustom = false, onCountChange }
             >
               Tancar
             </button>
+          </div>
+        </div>
+      )}
+
+      {showCustomInput && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Introduir quantitat</h3>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Quantitat de {birdName}
+              </label>
+              <input
+                type="number"
+                min="0"
+                value={customValue}
+                onChange={(e) => setCustomValue(e.target.value)}
+                placeholder="0"
+                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent text-lg text-center"
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleCustomSubmit();
+                  }
+                }}
+              />
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  setShowCustomInput(false);
+                  setCustomValue('');
+                }}
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-50"
+              >
+                Cancel·lar
+              </button>
+              <button
+                onClick={handleCustomSubmit}
+                disabled={!customValue || parseInt(customValue, 10) < 0}
+                className="flex-1 px-4 py-2 bg-amber-600 text-white rounded-xl hover:bg-amber-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
+              >
+                Desar
+              </button>
+            </div>
           </div>
         </div>
       )}
