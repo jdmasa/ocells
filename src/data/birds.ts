@@ -29,6 +29,13 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Motacilla alba',
     image: '15.jpg',
   },
+    {
+    id: 'erithacus-rubecula',
+    name_ca: 'Pit-roig',
+    name_es: 'Petirrojo',
+    scientific_name: 'Erithacus rubecula',
+      image: '17.jpg'
+  },
   
   {
     id: 'passer-domesticus',
@@ -96,12 +103,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Corneja',
     scientific_name: 'Corvus corone',
   },
-  {
-    id: 'erithacus-rubecula',
-    name_ca: 'Pit-roig',
-    name_es: 'Petirrojo',
-    scientific_name: 'Erithacus rubecula',
-  },
+
   {
     id: 'cyanistes-caeruleus',
     name_ca: 'Ferreret blau',
