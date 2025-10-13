@@ -47,12 +47,11 @@ export function ObservationSession({
   const [localEndTimeEdit, setLocalEndTimeEdit] = useState('');
 
   useEffect(() => {
-    const now = new Date();
-    const offset = now.getTimezoneOffset() * 60000;
-    const localISOTime = new Date(now.getTime() - offset).toISOString().slice(0, 16);
-    setLocalEndTime(localISOTime);
-    setLocalStartTime(new Date(startTime).toISOString().slice(0, 16));
-    setLocalEndTimeEdit(endTime ? new Date(endTime).toISOString().slice(0, 16) : localISOTime);
+    const offset = new Date().getTimezoneOffset() * 60000;
+    setLocalStartTime(new Date(new Date(startTime).getTime() - offset).toISOString().slice(0, 16));
+    if (endTime) {
+      setLocalEndTimeEdit(new Date(new Date(endTime).getTime() - offset).toISOString().slice(0, 16));
+    }
   }, [startTime, endTime]);
 
   const handleBirdCountChange = (birdId: string, count: number, isCustom: boolean = false) => {
@@ -122,6 +121,10 @@ export function ObservationSession({
                   {!isEditMode && !endTime && (
                     <button
                       onClick={() => {
+                        const now = new Date();
+                        const offset = now.getTimezoneOffset() * 60000;
+                        const localISOTime = new Date(now.getTime() - offset).toISOString().slice(0, 16);
+                        setLocalEndTime(localISOTime);
                         setShowEndSessionDialog(true);
                         setMenuOpen(false);
                       }}
