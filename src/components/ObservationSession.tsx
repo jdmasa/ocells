@@ -86,6 +86,7 @@ export function ObservationSession({
 
   const handleAddCustomBird = () => {
     if (!customBirdName.trim()) return;
+    handleBirdCountChange(customBirdName.trim(), 1, true);
     setShowCustomBirdDialog(false);
     setCustomBirdName('');
   };
