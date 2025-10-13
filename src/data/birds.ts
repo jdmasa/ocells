@@ -57,6 +57,13 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Sylvia melanocephala',
   image: '18.jpg',
   },
+  {
+    id: 'sylvia-atricapilla',
+    name_ca: 'Tallarol de casquet',
+    name_es: 'Curruca capirotada',
+    scientific_name: 'Sylvia atricapilla',
+    image: '2.jpg',
+  },
   
   {
     id: 'passer-domesticus',
@@ -128,11 +135,6 @@ export const barcelonaBirds: BirdSpecies[] = [
   },
   
   
-  {
-    id: 'sylvia-atricapilla',
-    name_ca: 'Tallarol de casquet',
-    name_es: 'Curruca capirotada',
-    scientific_name: 'Sylvia atricapilla',
-  },
+  
 
 ];
