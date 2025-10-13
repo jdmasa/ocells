@@ -64,6 +64,12 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Sylvia atricapilla',
     image: '2.jpg',
   },
+  {
+    id: 'phylloscopus-collybita',
+    name_ca: 'Mosquiter comú',
+    name_es: 'mosquitero común',
+    scientific_name: 'Phylloscopus collybita',
+  },
   
   {
     id: 'passer-domesticus',
