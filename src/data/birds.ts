@@ -22,6 +22,13 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Streptopelia decaocto',
       image: '1.jpg',
   },
+  {
+    id: 'motacilla-alba',
+    name_ca: 'Cuereta blanca',
+    name_es: 'Lavandera blanca',
+    scientific_name: 'Motacilla alba',
+    image: '15.jpg',
+  },
   
   {
     id: 'passer-domesticus',
@@ -101,12 +108,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Herrerillo común',
     scientific_name: 'Cyanistes caeruleus',
   },
-  {
-    id: 'motacilla-alba',
-    name_ca: 'Cuereta blanca',
-    name_es: 'Lavandera blanca',
-    scientific_name: 'Motacilla alba',
-  },
+  
   {
     id: 'phoenicurus-ochruros',
     name_ca: 'Cotxa fumada',
