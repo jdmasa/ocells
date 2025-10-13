@@ -25,14 +25,14 @@ export function MapSelector({ initialLat, initialLng, onLocationSelect, onCancel
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl overflow-hidden">
-        <div className="p-4 bg-emerald-600 text-white flex items-center justify-between">
+        <div className="p-4 bg-amber-600 text-white flex items-center justify-between">
           <h3 className="text-lg font-semibold flex items-center gap-2">
             <MapPin className="w-5 h-5" />
             Selecciona la ubicació
           </h3>
           <button
             onClick={onCancel}
-            className="p-1 hover:bg-emerald-700 rounded-lg transition-colors"
+            className="p-1 hover:bg-amber-700 rounded-lg transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
@@ -40,7 +40,7 @@ export function MapSelector({ initialLat, initialLng, onLocationSelect, onCancel
 
         <div className="p-4">
           <div
-            className="relative w-full h-96 bg-gradient-to-br from-emerald-100 to-sky-100 rounded-xl cursor-crosshair overflow-hidden border-2 border-gray-200"
+            className="relative w-full h-96 bg-gradient-to-br from-amber-100 to-sky-100 rounded-xl cursor-crosshair overflow-hidden border-2 border-gray-200"
             onClick={handleMapClick}
           >
             <div className="absolute inset-0 opacity-20">
@@ -65,7 +65,7 @@ export function MapSelector({ initialLat, initialLng, onLocationSelect, onCancel
               <p className="text-gray-600">Lng: {position.lng.toFixed(6)}</p>
             </div>
 
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm">
               Fes clic al mapa per seleccionar
             </div>
           </div>
@@ -79,7 +79,7 @@ export function MapSelector({ initialLat, initialLng, onLocationSelect, onCancel
             </button>
             <button
               onClick={() => onLocationSelect(position.lat, position.lng)}
-              className="flex-1 px-4 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 font-medium transition-colors flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-3 bg-amber-600 text-white rounded-xl hover:bg-amber-700 font-medium transition-colors flex items-center justify-center gap-2"
             >
               <Check className="w-5 h-5" />
               Confirmar ubicació
