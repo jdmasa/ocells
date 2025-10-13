@@ -76,7 +76,7 @@ function App() {
     const observations = await db.getObservationsBySession(sessionId);
     setCurrentSession(session);
     setCurrentObservations(observations);
-    setScreen({ type: 'active-session', sessionId, isEditMode: true });
+    setScreen({ type: 'active-session', sessionId, isEditMode: session.end_time !== null });
   };
 
   const handleObservationChange = (observations: Observation[]) => {
