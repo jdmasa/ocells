@@ -99,10 +99,7 @@ export function ObservationSession({
           <div>
             <h1 className="text-xl font-bold text-gray-800">Sessió d'Observació</h1>
             <p className="text-sm text-gray-600">
-              {new Date(startTime).toLocaleString('ca-ES'), {
-  dateStyle: 'short',
-  timeStyle: 'short',
-}}
+              {new Date(startTime).toLocaleString('ca-ES', {dateStyle: 'short', timeStyle: 'short',})}
             </p>
           </div>
 
