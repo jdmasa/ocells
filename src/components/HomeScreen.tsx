@@ -10,12 +10,12 @@ interface HomeScreenProps {
 
 export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout }: HomeScreenProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-emerald-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
-            <div className="inline-block bg-emerald-100 px-4 py-2 rounded-full mb-4">
-              <p className="text-emerald-800 font-medium">Hola, {profile.name}!</p>
+            <div className="inline-block bg-amber-100 px-4 py-2 rounded-full mb-4">
+              <p className="text-amber-800 font-medium">Hola, {profile.name}!</p>
             </div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               Observador d'Ocells
@@ -28,7 +28,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
           <div className="space-y-4">
             <button
               onClick={onStartNewSession}
-              className="w-full p-6 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-between group"
+              className="w-full p-6 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-between group"
             >
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-3 rounded-lg group-hover:scale-110 transition-transform">
@@ -36,7 +36,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
                 </div>
                 <div className="text-left">
                   <p className="text-white font-bold text-lg">Iniciar sessió</p>
-                  <p className="text-emerald-100 text-sm">Comença una nova observació</p>
+                  <p className="text-amber-100 text-sm">Comença una nova observació</p>
                 </div>
               </div>
             </button>
