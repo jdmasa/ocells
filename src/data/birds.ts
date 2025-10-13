@@ -50,7 +50,13 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Turdus merula',
       image: '19.jpg'
   },
-
+{
+    id: 'sylvia-melanocephala',
+    name_ca: 'Tallarol capnegre',
+    name_es: 'Curruca cabecinegra',
+    scientific_name: 'Sylvia melanocephala',
+  image: '18.jpg',
+  },
   
   {
     id: 'passer-domesticus',
