@@ -223,7 +223,7 @@ export function ObservationSession({
 
           <button
             onClick={() => setShowCustomBirdDialog(true)}
-            className="aspect-square bg-white rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-dashed border-emerald-300 hover:border-emerald-500 flex flex-col items-center justify-center gap-2 text-emerald-600"
+            className="aspect-square bg-white rounded-xl shadow-md hover:shadow-lg transition-all border-2 border-dashed border-amber-300 hover:border-amber-500 flex flex-col items-center justify-center gap-2 text-amber-600"
           >
             <Plus className="w-8 h-8" />
             <span className="text-sm font-medium">Afegir ocell</span>
@@ -243,7 +243,7 @@ export function ObservationSession({
                 type="datetime-local"
                 value={localEndTime}
                 onChange={(e) => setLocalEndTime(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
             </div>
             <div className="flex gap-3">
@@ -258,7 +258,7 @@ export function ObservationSession({
                   onEndSession(localEndTime);
                   setShowEndSessionDialog(false);
                 }}
-                className="flex-1 px-4 py-2 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700"
+                className="flex-1 px-4 py-2 bg-amber-600 text-white rounded-xl hover:bg-amber-700"
               >
                 Finalitzar
               </button>
@@ -280,7 +280,7 @@ export function ObservationSession({
                   type="datetime-local"
                   value={localStartTime}
                   onChange={(e) => setLocalStartTime(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -291,7 +291,7 @@ export function ObservationSession({
                   type="datetime-local"
                   value={localEndTimeEdit}
                   onChange={(e) => setLocalEndTimeEdit(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -307,7 +307,7 @@ export function ObservationSession({
                   onModifyTimestamps(localStartTime, localEndTimeEdit);
                   setShowTimestampDialog(false);
                 }}
-                className="flex-1 px-4 py-2 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700"
+                className="flex-1 px-4 py-2 bg-amber-600 text-white rounded-xl hover:bg-amber-700"
               >
                 Desar
               </button>
@@ -329,7 +329,7 @@ export function ObservationSession({
                 value={customBirdName}
                 onChange={(e) => setCustomBirdName(e.target.value)}
                 placeholder="Introdueix el nom"
-                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 autoFocus
               />
             </div>
@@ -346,7 +346,7 @@ export function ObservationSession({
               <button
                 onClick={handleAddCustomBird}
                 disabled={!customBirdName.trim()}
-                className="flex-1 px-4 py-2 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                className="flex-1 px-4 py-2 bg-amber-600 text-white rounded-xl hover:bg-amber-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
               >
                 Afegir
               </button>
