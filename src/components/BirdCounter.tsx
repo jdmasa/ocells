@@ -92,7 +92,7 @@ export function BirdCounter({ birdName, count, isCustom = false, imageUrl, onCou
                   setCustomValue(count.toString());
                   setShowCustomInput(true);
                 }}
-                className="w-40 h-40 bg-amber-50 hover:bg-amber-100 rounded-2xl flex items-center justify-center transition-colors"
+                className="w-24 h-24 bg-amber-50 hover:bg-amber-100 rounded-2xl flex items-center justify-center transition-colors"
               >
                 <span className="text-4xl font-bold text-amber-600">{count}</span>
               </button>
