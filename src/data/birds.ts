@@ -6,7 +6,14 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Colom roquer',
     name_es: 'Paloma',
     scientific_name: 'Columba livia',
-    image: '0.jpg'
+    image: '0.jpg',
+  },
+    {
+    id: 'columba-palumbus',
+    name_ca: 'Tudó',
+    name_es: 'Paloma torcaz',
+    scientific_name: 'Columba palumbus',
+      image: '1.jpg',
   },
   {
     id: 'passer-domesticus',
@@ -104,10 +111,5 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Curruca capirotada',
     scientific_name: 'Sylvia atricapilla',
   },
-  {
-    id: 'columba-palumbus',
-    name_ca: 'Tudó',
-    name_es: 'Paloma torcaz',
-    scientific_name: 'Columba palumbus',
-  },
+
 ];
