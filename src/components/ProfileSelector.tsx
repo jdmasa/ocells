@@ -19,7 +19,7 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
   }, []);
 
   const loadProfiles = async () => {
-    await db.open();
+    await db.init();
     const loadedProfiles = await db.getProfiles();
     setProfiles(loadedProfiles);
   };
