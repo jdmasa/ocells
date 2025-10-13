@@ -36,6 +36,13 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Erithacus rubecula',
       image: '17.jpg'
   },
+  {
+    id: 'phoenicurus-ochruros',
+    name_ca: 'Cotxa fumada',
+    name_es: 'Colirrojo tizón',
+    scientific_name: 'Phoenicurus ochruros',
+    image: '16.jpg',
+  },
   
   {
     id: 'passer-domesticus',
@@ -111,12 +118,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Cyanistes caeruleus',
   },
   
-  {
-    id: 'phoenicurus-ochruros',
-    name_ca: 'Cotxa fumada',
-    name_es: 'Colirrojo tizón',
-    scientific_name: 'Phoenicurus ochruros',
-  },
+  
   {
     id: 'sylvia-atricapilla',
     name_ca: 'Tallarol de casquet',
