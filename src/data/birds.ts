@@ -3,9 +3,10 @@ import { BirdSpecies } from '../types';
 export const barcelonaBirds: BirdSpecies[] = [
   {
     id: 'columba-livia',
-    name_ca: 'Colom',
+    name_ca: 'Colom roquer',
     name_es: 'Paloma',
     scientific_name: 'Columba livia',
+    image: '0.jpg'
   },
   {
     id: 'passer-domesticus',
