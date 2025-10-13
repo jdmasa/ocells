@@ -66,6 +66,7 @@ export function HomeScreen({ profile, onStartNewSession, onLoadSession, onLogout
           </button>
         </div>
       </div>
+      Fotos de https://ornitologia.org/ca/fitxa_jardins.pdf
     </div>
   );
 }
