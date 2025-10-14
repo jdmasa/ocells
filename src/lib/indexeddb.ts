@@ -145,6 +145,34 @@ class IndexedDBService {
       request.onerror = () => reject(request.error);
     });
   }
+
+  async deleteProfile(profileId: string): Promise<void> {
+    const sessions = await this.getSessionsByProfile(profileId);
+
+    for (const session of sessions) {
+      const observations = await this.getObservationsBySession(session.id);
+      for (const observation of observations) {
+        await this.deleteObservation(observation.id);
+      }
+      await this.deleteSession(session.id);
+    }
+
+    const store = this.getStore(STORES.PROFILES, 'readwrite');
+    return new Promise((resolve, reject) => {
+      const request = store.delete(profileId);
+      request.onsuccess = () => resolve();
+      request.onerror = () => reject(request.error);
+    });
+  }
+
+  async deleteSession(sessionId: string): Promise<void> {
+    const store = this.getStore(STORES.SESSIONS, 'readwrite');
+    return new Promise((resolve, reject) => {
+      const request = store.delete(sessionId);
+      request.onsuccess = () => resolve();
+      request.onerror = () => reject(request.error);
+    });
+  }
 }
 
 export const db = new IndexedDBService();

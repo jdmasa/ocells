@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { UserPlus, Users } from 'lucide-react';
+import { UserPlus, Users, Trash2 } from 'lucide-react';
 import { Profile } from '../types';
 import { db } from '../lib/indexeddb';
 
@@ -11,10 +11,11 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [showNewProfile, setShowNewProfile] = useState(false);
   const [newProfileName, setNewProfileName] = useState('');
+  const [deleteConfirmProfile, setDeleteConfirmProfile] = useState<Profile | null>(null);
 
   useEffect(() => {
     loadProfiles();
-  
+
 
   }, []);
 
@@ -38,6 +39,12 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
     onProfileSelected(newProfile);
   };
 
+  const handleDeleteProfile = async (profileId: string) => {
+    await db.deleteProfile(profileId);
+    setDeleteConfirmProfile(null);
+    await loadProfiles();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -58,18 +65,32 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
           {!showNewProfile ? (
             <div className="space-y-4">
               {profiles.map((profile) => (
-                <button
+                <div
                   key={profile.id}
-                  onClick={() => onProfileSelected(profile)}
                   className="w-full p-4 bg-amber-50 hover:bg-amber-100 rounded-xl transition-colors flex items-center justify-between group"
                 >
-                  <span className="text-lg font-medium text-gray-800">
-                    {profile.name}
-                  </span>
-                  <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                </button>
+                  <button
+                    onClick={() => onProfileSelected(profile)}
+                    className="flex-1 flex items-center justify-between"
+                  >
+                    <span className="text-lg font-medium text-gray-800">
+                      {profile.name}
+                    </span>
+                    <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setDeleteConfirmProfile(profile);
+                    }}
+                    className="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                    title="Eliminar perfil"
+                  >
+                    <Trash2 className="w-5 h-5" />
+                  </button>
+                </div>
               ))}
 
               <button
@@ -120,6 +141,32 @@ export function ProfileSelector({ onProfileSelected }: ProfileSelectorProps) {
           )}
         </div>
       </div>
+
+      {deleteConfirmProfile && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Eliminar Perfil</h3>
+            <p className="text-gray-600 mb-6">
+              Estàs segur que vols eliminar el perfil <strong>{deleteConfirmProfile.name}</strong>?
+              Aquesta acció eliminarà totes les sessions i observacions associades i no es pot desfer.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setDeleteConfirmProfile(null)}
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 font-medium transition-colors"
+              >
+                Cancel·lar
+              </button>
+              <button
+                onClick={() => handleDeleteProfile(deleteConfirmProfile.id)}
+                className="flex-1 px-4 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 font-medium transition-colors"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
