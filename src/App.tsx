@@ -135,6 +135,7 @@ function App() {
     };
 
     await db.updateSession(updatedSession);
+    setCurrentSession(updatedSession);
 
     const existingObservations = await db.getObservationsBySession(currentSession.id);
 
@@ -152,8 +153,6 @@ function App() {
         await db.deleteObservation(existing.id);
       }
     }
-
-    setScreen({ type: 'home' });
   };
 
   const handleModifyTimestamps = async (startTime: string, endTime: string | null) => {
