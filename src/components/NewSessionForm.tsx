@@ -50,10 +50,12 @@ export function NewSessionForm({
           });
           setIsLoadingLocation(false);
         },
-        () => {
+        (error) => {
+          console.log('Geolocation error:', error);
           setLocation({ lat: 41.3851, lng: 2.1734 });
           setIsLoadingLocation(false);
-        }
+        },
+        { timeout: 5000, enableHighAccuracy: false }
       );
     } else {
       setLocation({ lat: 41.3851, lng: 2.1734 });
