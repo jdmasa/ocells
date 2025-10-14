@@ -79,8 +79,27 @@ function App() {
     setScreen({ type: 'active-session', sessionId, isEditMode: session.end_time !== null });
   };
 
-  const handleObservationChange = (observations: Observation[]) => {
+  const handleObservationChange = async (observations: Observation[]) => {
+    if (!currentSession) return;
+
     setCurrentObservations(observations);
+
+    const existingObservations = await db.getObservationsBySession(currentSession.id);
+
+    for (const obs of observations) {
+      const existing = existingObservations.find((o) => o.id === obs.id);
+      if (existing) {
+        await db.updateObservation(obs);
+      } else {
+        await db.addObservation(obs);
+      }
+    }
+
+    for (const existing of existingObservations) {
+      if (!observations.find((o) => o.id === existing.id)) {
+        await db.deleteObservation(existing.id);
+      }
+    }
   };
 
   const handleEndSession = async (endTime: string) => {
