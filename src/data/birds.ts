@@ -69,6 +69,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Mosquiter comú',
     name_es: 'mosquitero común',
     scientific_name: 'Phylloscopus collybita',
+    image: '21.jpg',
   },
   
   {
