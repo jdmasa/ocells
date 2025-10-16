@@ -111,8 +111,15 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Pardal comú',
     name_es: 'Gorrión común',
     scientific_name: 'Passer domesticus',
+    image: '6.jpg'
   },
-
+{
+    id: 'passer-montanus',
+    name_ca: 'Pardal xarrec',
+    name_es: 'gorrión molinero',
+    scientific_name: 'Passer montanus',
+    image: '7.jpg'
+  },
   
   {
     id: 'streptopelia-decaocto',
