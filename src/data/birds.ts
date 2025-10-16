@@ -67,9 +67,23 @@ export const barcelonaBirds: BirdSpecies[] = [
   {
     id: 'phylloscopus-collybita',
     name_ca: 'Mosquiter comú',
-    name_es: 'mosquitero común',
+    name_es: 'Mosquitero común',
     scientific_name: 'Phylloscopus collybita',
     image: '21.jpg',
+  },
+  {
+    id: 'cyanistes-caeruleus',
+    name_ca: 'Mallerenga blava',
+    name_es: 'Herrerillo común',
+    scientific_name: 'Cyanistes caeruleus',
+    image: '20.jpg',
+  },
+   {
+    id: 'parus-major',
+    name_ca: 'Mallerenga carbonera',
+    name_es: 'Carbonero común',
+    scientific_name: 'Parus major',
+    image: '3.jpg',
   },
   
   {
