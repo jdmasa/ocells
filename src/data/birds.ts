@@ -85,7 +85,27 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Parus major',
     image: '3.jpg',
   },
-  
+  {
+    id: 'pica-pica',
+    name_ca: 'Garsa',
+    name_es: 'Urraca',
+    scientific_name: 'Pica pica',
+    image: '4.jpg',
+  },
+  {
+    id: 'sturnus-vulgaris',
+    name_ca: 'Estornell vulgar',
+    name_es: 'Estornino pinto',
+    scientific_name: 'Sturnus vulgaris',
+    image: '5.jpg'
+  },
+  {
+    id: 'sturnus-unicolor',
+    name_ca: 'Estornell negre',
+    name_es: 'Estornino negro',
+    scientific_name: 'Sturnus unicolor',
+    image: '14.jpg'
+  },
   {
     id: 'passer-domesticus',
     name_ca: 'Pardal comú',
@@ -93,12 +113,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Passer domesticus',
   },
 
-  {
-    id: 'sturnus-vulgaris',
-    name_ca: 'Estornell vulgar',
-    name_es: 'Estornino pinto',
-    scientific_name: 'Sturnus vulgaris',
-  },
+  
   {
     id: 'streptopelia-decaocto',
     name_ca: 'Tórtora turca',
@@ -123,12 +138,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Verdecillo',
     scientific_name: 'Serinus serinus',
   },
-  {
-    id: 'pica-pica',
-    name_ca: 'Garsa',
-    name_es: 'Urraca',
-    scientific_name: 'Pica pica',
-  },
+  
   {
     id: 'delichon-urbicum',
     name_ca: 'Oreneta cuablanca',
