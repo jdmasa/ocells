@@ -120,18 +120,23 @@ export const barcelonaBirds: BirdSpecies[] = [
     scientific_name: 'Passer montanus',
     image: '7.jpg'
   },
-  
   {
-    id: 'streptopelia-decaocto',
-    name_ca: 'Tórtora turca',
-    name_es: 'Tórtola turca',
-    scientific_name: 'Streptopelia decaocto',
+    id: 'fringilla-coelebs',
+    name_ca: 'Pinsà comú',
+    name_es: 'pinzón vulgar',
+    scientific_name: 'Fringilla coelebs',
+  },
+    {
+    id: 'serinus-serinus',
+    name_ca: 'Gafarró',
+    name_es: 'Verdecillo',
+    scientific_name: 'Serinus serinus',
   },
   {
-    id: 'larus-michahellis',
-    name_ca: 'Gavià de potes grogues',
-    name_es: 'Gaviota patiamarilla',
-    scientific_name: 'Larus michahellis',
+    id: 'chloris-chloris',
+    name_ca: 'Verdum',
+    name_es: 'Verderón común',
+    scientific_name: 'Chloris chloris',
   },
   {
     id: 'carduelis-carduelis',
@@ -139,38 +144,10 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_es: 'Jilguero',
     scientific_name: 'Carduelis carduelis',
   },
-  {
-    id: 'serinus-serinus',
-    name_ca: 'Gafarró',
-    name_es: 'Verdecillo',
-    scientific_name: 'Serinus serinus',
-  },
-  
-  {
-    id: 'delichon-urbicum',
-    name_ca: 'Oreneta cuablanca',
-    name_es: 'Avión común',
-    scientific_name: 'Delichon urbicum',
-  },
-  {
-    id: 'apus-apus',
-    name_ca: 'Falciot negre',
-    name_es: 'Vencejo común',
-    scientific_name: 'Apus apus',
-  },
-  {
-    id: 'corvus-corone',
-    name_ca: 'Cornella',
-    name_es: 'Corneja',
-    scientific_name: 'Corvus corone',
-  },
 
-  {
-    id: 'cyanistes-caeruleus',
-    name_ca: 'Ferreret blau',
-    name_es: 'Herrerillo común',
-    scientific_name: 'Cyanistes caeruleus',
-  },
+  
+
+  
   
   
   
