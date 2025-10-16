@@ -125,31 +125,27 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Pinsà comú',
     name_es: 'pinzón vulgar',
     scientific_name: 'Fringilla coelebs',
+    image: '8.jpg',
   },
     {
     id: 'serinus-serinus',
     name_ca: 'Gafarró',
     name_es: 'Verdecillo',
     scientific_name: 'Serinus serinus',
+    image: '9.jpg',
   },
   {
     id: 'chloris-chloris',
     name_ca: 'Verdum',
     name_es: 'Verderón común',
     scientific_name: 'Chloris chloris',
+    image: '10.jpg',
   },
   {
     id: 'carduelis-carduelis',
     name_ca: 'Cadernera',
     name_es: 'Jilguero',
     scientific_name: 'Carduelis carduelis',
-  },
-
-  
-
-  
-  
-  
-  
-
+    image: '11.jpg',
+  }, 
 ];
