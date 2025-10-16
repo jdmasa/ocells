@@ -201,6 +201,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Cuereta torrentera',
     name_es: 'Lavandera cascadeña',
     scientific_name: 'Motacilla cinerea',
+    image: '60.jpg'
   },
   {
     id: 'troglodytes-troglodytes',
@@ -219,6 +220,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Rossinyol',
     name_es: 'Ruiseñor común',
     scientific_name: 'Luscinia megarhynchos',
+    image: '53.jpg'
   },
   {
     id: 'monticola-solitarius',
@@ -249,18 +251,21 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Bruel',
     name_es: 'Petirrojo europeo',
     scientific_name: 'Erithacus rubecula',
+    image: '55.jpg'
   },
   {
     id: 'muscicapa-striata',
     name_ca: 'Papamosques gris',
     name_es: 'Papamoscas gris',
     scientific_name: 'Muscicapa striata',
+    image: '56.jpg'
   },
   {
     id: 'aegithalos-caudatus',
     name_ca: 'Mallerenga cuallarga',
     name_es: 'Mito',
     scientific_name: 'Aegithalos caudatus',
+    image: '58.jpg'
   },
   {
     id: 'poecile-palamensis',
@@ -273,6 +278,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Mallerenga emplomallada',
     name_es: 'Herrerillo capuchino',
     scientific_name: 'Lophophanes cristatus',
+    image: '59.jpg'
   },
   {
     id: 'parus-major',
@@ -315,6 +321,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Passerell comú',
     name_es: 'Pardillo común',
     scientific_name: 'Linaria cannabina',
+    image: '57.jpg'
   },
   {
     id: 'loxia-curvirostra',
