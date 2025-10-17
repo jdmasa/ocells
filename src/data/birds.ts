@@ -104,7 +104,7 @@ export const barcelonaBirds: BirdSpecies[] = [
     name_ca: 'Estornell negre',
     name_es: 'Estornino negro',
     scientific_name: 'Sturnus unicolor',
-    image: '14.png'
+    image: '14.jpg'
   },
   {
     id: 'passer-domesticus',
