@@ -11,7 +11,7 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "lucide_bird.svg",
+      "src": "logo_oreneta.svg",
       "sizes": "24x24 192x192 512x512",
       "type": "image/svg+xml",
       "purpose": "maskable"
